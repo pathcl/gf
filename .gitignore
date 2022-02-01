@@ -1,0 +1,8 @@
+# Don't save executables
+bin/
+
+# Don't save environment customizations
+.config/**
+
+# But do save the dist files
+!.config/**/*.dist

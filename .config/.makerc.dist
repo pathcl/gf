@@ -1,0 +1,4 @@
+BINARY_NAME       ?= main
+APPLICATION_NAME  ?= gf
+SHORT_DESCRIPTION ?= gf is github search tool
+LONG_DESCRIPTION  ?= gf allows you to search for a given string as code in Github
