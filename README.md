@@ -1,4 +1,11 @@
-# What is gh?
+# What is gf?
+Simple tool which looks for a string in Github and output Go code where the query is present.
+
+Usage:
+
+    $ gf search fmt.Println | vim -
+
+Note: You need to have 'GITHUB_TOKEN' variable present in your environment.
 
 ## Building the application
 Run `make build`.
