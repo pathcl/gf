@@ -1,7 +1,7 @@
 package app
 
 import (
-	"gf/command"
+	"github.com/pathcl/gf/command"
 )
 
 func init() {

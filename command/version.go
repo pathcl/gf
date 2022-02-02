@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"gf/version"
+	"github.com/pathcl/gf/version"
 )
 
 var (

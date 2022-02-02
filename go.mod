@@ -1,4 +1,4 @@
-module gf
+module github.com/pathcl/gf
 
 go 1.17
 

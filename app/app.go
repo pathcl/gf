@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"gf/version"
+	"github.com/pathcl/gf/version"
 
 	"github.com/spf13/cobra"
 )

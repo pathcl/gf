@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gf/app"
+	"github.com/pathcl/gf/app"
 )
 
 func main() {

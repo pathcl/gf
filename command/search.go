@@ -3,13 +3,14 @@ package command
 import (
 	"context"
 	"fmt"
-	"gf/version"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"strings"
 	"time"
+
+	"github.com/pathcl/gf/version"
 
 	"github.com/google/go-github/github"
 	"github.com/spf13/cobra"
