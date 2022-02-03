@@ -6,10 +6,6 @@ on:
 jobs:
   goreleaser:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        goos: [linux, darwin]
-        goarch: [amd64, arm64]
 
     steps:
 
@@ -34,8 +30,6 @@ jobs:
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
         with:
-          goos: ${{ matrix.goos }}
-          goarch: ${{ matrix.goarch }}
           version: latest
           args: release --rm-dist
         env:
