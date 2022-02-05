@@ -1,9 +1,10 @@
-# What is gf?
-Simple tool which looks for a string in Github and output Go code where the query is present.
+# Why?
 
-Usage:
+I like reading code.
 
-    $ gf search fmt.Println | vim -
+Let's say we want to find all Go code in 'kubernetes' github org for function 'fmt.Println':
+
+    $ gf search extension:go org:kubernetes fmt.Println | vim -
 
 Note: You need to have 'GITHUB_TOKEN' variable present in your environment.
 

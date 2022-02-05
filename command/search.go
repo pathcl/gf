@@ -90,7 +90,7 @@ func executeSearchCommand(cmd *cobra.Command, args []string) {
 
 	// main search loop
 	str2 := strings.Join(args, " ")
-	gquery := fmt.Sprintf("extension:go %s", str2)
+	gquery := fmt.Sprintf("%s", str2)
 	log.Printf("Query %s", gquery)
 
 	for {
