@@ -6,7 +6,9 @@ Let's say we want to find all Go code in 'kubernetes' github org for function 'f
 
     $ gf search extension:go org:kubernetes fmt.Println | vim -
 
-Note: You need to have 'GITHUB_TOKEN' variable present in your environment.
+Note: You need to have 'GITHUB_TOKEN' variable present in your environment. Follow instructions [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). Once you have it:
+
+    $ export GITHUB_TOKEN='mysupertoken'
 
 # Install
 
