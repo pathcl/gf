@@ -15,6 +15,10 @@ Note: You need to have 'GITHUB_TOKEN' variable present in your environment. Foll
 
     $ export GITHUB_TOKEN='mysupertoken'
 
+# Try it on docker
+
+    $ docker run -e GITHUB_TOKEN=ghs_mytoken pathcl/gf:v0.0.3 search extension:go fmt.Println
+
 # Install
 
     $ go install github.com/pathcl/gf@latest
