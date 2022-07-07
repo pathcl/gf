@@ -79,7 +79,8 @@ func executeSearchCommand(cmd *cobra.Command, args []string) {
 	tc := oauth2.NewClient(ctx, ts)
 
 	client := github.NewClient(tc)
-
+	// base, _ := url.Parse("https://ghproxy.sanmartin.dev/")
+	// client.BaseURL = base
 	opts := &github.SearchOptions{TextMatch: true,
 		ListOptions: github.ListOptions{
 			PerPage: 100,
@@ -93,8 +94,11 @@ func executeSearchCommand(cmd *cobra.Command, args []string) {
 	gquery := fmt.Sprintf("%s", str2)
 	log.Printf("Query %s", gquery)
 
+	var r string
+
 	for {
 		op, resp, err := client.Search.Code(ctx, gquery, opts)
+		r = fmt.Sprintf("Remaining: %s", resp.Header.Get("x-ratelimit-remaining"))
 		if _, ok := err.(*github.RateLimitError); ok {
 			log.Println("Hit rate limit. Waiting 45 secs")
 			time.Sleep(45 * time.Second)
@@ -126,4 +130,6 @@ func executeSearchCommand(cmd *cobra.Command, args []string) {
 		fmt.Printf("%s", page.Body)
 
 	}
+
+	log.Println("Token remaining ", r)
 }

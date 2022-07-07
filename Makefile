@@ -9,8 +9,8 @@ SHELL := $(shell which bash)
 DOCKER := $(shell command -v docker)
 
 # Go parameters
-GOCMD := go
-GOBUILD := $(GOCMD) build
+GOCMD := CGO_ENABLED=1 go
+GOBUILD := $(GOCMD) build -race -a -installsuffix cgo
 GORUN := $(GOCMD) run
 GOCLEAN := $(GOCMD) clean
 GOTEST := $(GOCMD) test
