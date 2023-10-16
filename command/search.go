@@ -127,8 +127,8 @@ func executeSearchCommand(cmd *cobra.Command, args []string) {
 	for i := 0; i < len(urls); i++ {
 		page := <-pages
 		// spit everything to stdout
-		fmt.Printf("%s", page.Body)
-
+		fmt.Printf("// Reference: %s\n", page.url)
+		fmt.Printf("\n%s", page.Body)
 	}
 
 	log.Println("Token remaining ", r)

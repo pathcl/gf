@@ -1,3 +1,0 @@
-region: us-east-1
-cluster: core-production
-timeout: 10m0s
